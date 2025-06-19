@@ -9,7 +9,7 @@
 }
 
 
-/* Left Contact Info */
+/* Left Side */
 
 .contact-left {
     background-color: #014f6d;
@@ -19,7 +19,7 @@
 }
 
 
-/* Right Contact Form */
+/* Right Side */
 
 .contact-right {
     background-color: white;
@@ -67,7 +67,7 @@
 }
 
 
-/* Form Inputs */
+/* Form Styling */
 
 form input,
 form textarea {
@@ -95,9 +95,17 @@ form button:hover {
 }
 
 
-/* ========================
-     Responsive Mobile Design
-     ======================== */
+/* Map Container */
+
+.map-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Responsive Design */
 
 @media (max-width: 768px) {
     .contact-container {
@@ -124,11 +132,4 @@ form button:hover {
         padding: 10px;
         font-size: 1rem;
     }
-}
-
-.map-container {
-    margin-top: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }

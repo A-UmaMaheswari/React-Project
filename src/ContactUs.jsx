@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import "./ContactUs.css";
+import './ContactUs.css';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
 
@@ -16,27 +16,28 @@ function ContactUs() {
     form.current.appendChild(dateTimeInput);
 
     emailjs.sendForm(
-      'service_p3hvfbf',
-      'template_8tkbszx',
+      'service_p3hvfbf',      // Replace with your service ID
+      'template_8tkbszx',     // Replace with your template ID
       form.current,
-      '2rTQ8uQLxGTl_XEnF'
+      '2rTQ8uQLxGTl_XEnF'     // Replace with your user/public key
     )
-      .then((result) => {
-        alert('Message sent successfully!');
-        form.current.reset();
-      }, (error) => {
-        alert('Failed to send the message. Try again later.');
-        console.error(error);
-      });
+    .then(() => {
+      alert('Message sent successfully!');
+      form.current.reset();
+    })
+    .catch((error) => {
+      alert('Failed to send the message. Try again later.');
+      console.error(error);
+    });
   };
 
   return (
     <div className="contact-container">
       <div className="contact-left">
         <h2 className="title-green">Get in Touch</h2>
-        <p><FaEnvelope className="icon-red" /> <strong>Email:</strong> 	avulauma85@gmail.com</p>
+        <p><FaEnvelope className="icon-red" /> <strong>Email:</strong> avulauma85@gmail.com</p>
         <p><FaPhone className="icon-green" /> <strong>Phone:</strong> 7670849258</p>
-        <p><FaMapMarkerAlt className="icon-red" /> <strong>Address:</strong> Visakhapatnam, Andhra Pradesh-530022</p>
+        <p><FaMapMarkerAlt className="icon-red" /> <strong>Address:</strong> Visakhapatnam, Andhra Pradesh - 530022</p>
 
         <h3 className="follow-title">Follow Us</h3>
         <div className="social-icons">
@@ -45,7 +46,6 @@ function ContactUs() {
           <FaTwitter className="social-icon" />
         </div>
 
-        {/* Google Map Embed */}
         <div className="map-container">
           <iframe
             title="Google Map"
