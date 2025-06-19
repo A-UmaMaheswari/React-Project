@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import './ContactUs.css';
+import './Contact.css';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
 
